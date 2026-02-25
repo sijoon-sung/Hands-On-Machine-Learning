@@ -16,10 +16,10 @@
 
 전통적인 프로그래밍 기법으로는 해결하기 어렵거나 불가능한 문제들을 머신러닝이 해결할 수 있다.
 
-![[image/Pasted image 20260128033136.png]]
+![전통적인 프로그래밍 접근법](../../assets/images/ch01/traditional_approach.png)
 *그림 1. 전통적인 프로그래밍 접근 방법*
 
-![[image/Pasted image 20260128033153.png]]
+![머신러닝 접근법](../../assets/images/ch01/ml_approach.png)
 *그림 2. 머신러닝 접근 방법*
 
 1. **복잡한 규칙 대체:** 기존에는 긴 규칙 목록(if-else 등)이 필요했던 문제를 더 짧고 유지보수하기 쉬우며 정확한 코드로 대체 가능하다 (예: 스팸 필터).
@@ -39,17 +39,17 @@
 
 - **주요 작업:**
     - **분류 (Classification):** 스팸 필터처럼 클래스를 나누는 것.
-      ![[image/Pasted image 20260128034634.png]]
+      ![분류 예시](../../assets/images/ch01/classification_example.png)
     - **회귀 (Regression):** 주행거리, 연식 등을 통해 중고차 가격(수치)을 예측하는 것.
       **로지스틱 회귀(Logistic Regression):** 명칭은 회귀이나 주로 **분류**에 사용된다.
-      ![[image/Pasted image 20260128033258.png]]
+      ![회귀 예시](../../assets/images/ch01/regression_example.png)
 - **주요 알고리즘:** k-최근접 이웃(k-NN), 선형 회귀, 로지스틱 회귀, 서포트 벡터 머신(SVM), 결정 트리, 랜덤 포레스트, 신경망 등.
 
 #### **비지도 학습 (Unsupervised Learning)**
 
 훈련 데이터에 레이블이 없으며, 시스템이 스스로 데이터의 구조를 파악해야 한다.
-![[image/Pasted image 20260128034658.png]]
-![[image/Pasted image 20260128034728.png]]
+![비지도 학습 예시 1](../../assets/images/ch01/unsupervised_example_1.png)
+![비지도 학습 예시 2](../../assets/images/ch01/unsupervised_example_2.png)
 
 - **주요 작업:**
     - **군집 (Clustering):** 유사한 그룹끼리 묶는 것 (예: 블로그 방문자 그룹화).
@@ -61,10 +61,10 @@
 #### **준지도 학습 (Semisupervised Learning)**
 
 레이블이 있는 데이터가 적고, 없는 데이터가 많을 때 사용한다 (예: 구글 포토의 인물 태깅 - 소수의 인물만 태깅하면 나머지는 자동 분류).
-![[image/Pasted image 20260128045509.png]]
+![준지도 학습 예시](../../assets/images/ch01/semisupervised_example.png)
 
 #### **강화 학습 (Reinforcement Learning)**
-![[image/Pasted image 20260128045521.png]]
+![강화 학습 예시](../../assets/images/ch01/reinforcement_example.png)
 - **에이전트(Agent)**가 **환경(Environment)**을 관찰하고 **행동(Action)**을 실행하며, 그 결과로 **보상(Reward)** 또는 벌점을 받는다.
 - 가장 큰 보상을 얻기 위한 최상의 전략(**정책, Policy**)을 스스로 학습한다 (예: 알파고, 보행 로봇).
 
@@ -79,7 +79,7 @@
 - 새로운 데이터에 대해 학습하려면 전체 데이터를 사용하여 처음부터 다시 훈련해야 하므로 시간과 컴퓨팅 자원이 많이 소요된다.
 
 #### **온라인 학습 (Online Learning)**
-![[image/Pasted image 20260128045717.png]]
+![온라인 학습 구조](../../assets/images/ch01/online_learning_structure.png)
 - 데이터를 순차적으로 한 개씩 또는 **미니배치(Mini-batch)** 단위로 주입하여 시스템을 훈련한다.
 - 학습 단계가 빠르고 비용이 적게 들어 데이터가 도착하는 대로 즉시 학습이 가능하다.
 - **외부 메모리 학습(Out-of-core learning):** 컴퓨터의 메인 메모리(RAM) 용량을 초과하는 대용량 데이터를 처리할 때 필수적이다. 전체 데이터를 로드하지 않고 일부씩 로드하여 학습하므로, 시스템 메모리 제약을 극복할 수 있는 중요한 기법이다.
@@ -88,18 +88,18 @@
 ### 3.3 어떻게 일반화(Generalization)하는가? (Instance-based vs Model-based)
 
 #### **사례 기반 학습 (Instance-based Learning)**
-![[image/Pasted image 20260128050134.png]]
+![사례 기반 학습](../../assets/images/ch01/instance_based_learning.png)
 - 훈련 데이터를 단순히 기억(암기)한다.
 - 새로운 데이터가 입력되면 기존 데이터와의 **유사도(Similarity)**를 측정하여 분류하거나 예측한다 (예: k-최근접 이웃).
 
 #### **모델 기반 학습 (Model-based Learning)**
-![[image/Pasted image 20260128050145.png]]
+![모델 기반 학습](../../assets/images/ch01/model_based_learning.png)
 - 샘플들의 모델을 생성하여 예측에 사용한다.
 - **과정:** 데이터 분석 -> 모델 선택 (예: 선형 모델) -> 훈련 (비용 함수 최소화하여 파라미터 최적화) -> 새로운 데이터 예측(추론).
 - **모델 파라미터:** 모델 내부의 설정 값 ($\theta$).
   $life\_satisfaction = \theta_0 + \theta_1 \times GDP\_per\_capita$
-![[image/Pasted image 20260128050440.png]]
-![[image/Pasted image 20260128050402.png]]
+![모델 파라미터 최적화](../../assets/images/ch01/model_parameter_optimization.png)
+![모델 기반 학습 예시](../../assets/images/ch01/model_based_example.png)
 
 ## 4. 머신러닝의 주요 도전 과제 (Main Challenges)
 
@@ -108,11 +108,11 @@
 ### 4.1 나쁜 데이터 (Bad Data)
 
 1. **충분하지 않은 양의 훈련 데이터:** 간단한 문제라도 수천 개의 데이터가 필요하며, 복잡한 문제는 수백만 개가 요구될 수 있다.
-   ![[image/Pasted image 20260128051441.png]]
+   ![데이터 양과 성능의 관계](../../assets/images/ch01/data_quantity_vs_performance.png)
    **데이터의 비합리적 효과성(The Unreasonable Effectiveness of Data):** 성능이 낮은 알고리즘이라도 데이터의 양이 압도적으로 많아지면, 뛰어난 알고리즘보다 더 좋은 성능을 낼 수 있다. 초기에는 알고리즘 간 성능 차이가 크지만, 데이터의 양이 증가할수록 성능이 수렴하는 경향을 보인다.
 
 2. **대표성 없는 훈련 데이터:** 훈련 데이터가 새로운 사례를 적절히 대표하지 못하면 예측 정확도가 저하된다 (예: **샘플링 편향**).
-    ![[image/Pasted image 20260128051632.png]]
+    ![대표성 없는 데이터](../../assets/images/ch01/non_representative_data.png)
     점선: 구형 모델(일부 국가 누락)
     대표성이 결여된 데이터로 훈련 시, 일반화 성능이 떨어진 모델이 생성된다.
 
@@ -123,11 +123,11 @@
 ### 4.2 나쁜 알고리즘 (Bad Algorithm)
 
 1. **과대적합 (Overfitting):**
-    ![[image/Pasted image 20260128051746.png]]
+    ![과대적합 예시](../../assets/images/ch01/overfitting_example.png)
     이러한 패턴은 새로운 데이터에 일반화되지 않는다.
     - 모델이 훈련 데이터에는 과도하게 적합되었으나, 일반성이 결여되어 새로운 데이터에 대한 성능이 저하되는 현상이다.
     - **해결:** 모델 단순화, 규제(Regularization) 적용, 훈련 데이터 추가 확보, 잡음 제거.
-      ![[image/Pasted image 20260128052146.png]]
+      ![규제 적용](../../assets/images/ch01/regularization.png)
       학습 과정에서 적용할 규제의 양은 하이퍼파라미터로 제어할 수 있다. 하이퍼파라미터는 학습 알고리즘의 파라미터이며, 모델의 파라미터가 아니다.
 
 2. **과소적합 (Underfitting):**
