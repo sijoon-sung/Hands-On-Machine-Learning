@@ -83,6 +83,7 @@ bag_clf.fit(X_train, y_train)
 **[결과 해석]**
 - BaggingClassifier는 기본적으로 **소프트 보팅(Soft Voting)**을 수행합니다.
 - 단일 트리보다 앙상블의 결정 경계가 훨씬 **매끄럽고 일반화 성능이 좋음**. 분산이 줄어들어 과적합 위험이 낮아집니다.
+![[Pasted image 20260202183030.png]]
 
 ---
 
@@ -156,6 +157,7 @@ for name, score in zip(iris["feature_names"], rnd_clf.feature_importances_):
 - sepal length: ~11%, sepal width: ~2%, petal length: ~44%, petal width: ~42%
 - **분석:** 꽃잎(petal) 관련 특징이 꽃받침(sepal)보다 훨씬 중요함을 알 수 있습니다.
 - **활용:** MNIST 이미지 데이터에 적용하면 픽셀 중요도를 시각화할 수 있으며, **특징 선택(Feature Selection)**에 매우 유용합니다.
+![[Pasted image 20260214144459.png]]
 
 ---
 
