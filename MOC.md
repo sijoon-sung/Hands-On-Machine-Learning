@@ -39,7 +39,9 @@
   * [Experiment] 트리의 훈련 병목 및 실시간 네트워크 패킷 추론 속도 실험
 
 * Chapter 07. Ensemble Learning and Random Forests (앙상블 학습과 랜덤 포레스트)
-  * [[Chapter_07_Ensemble_Learning_and_Random_Forests/07_Ensemble_Learning_Concepts|[Concept] 배깅, 페이스팅, 부스팅(AdaBoost, Gradient Boosting)]]
+  * [[Chapter_07_Ensemble_Learning_and_Random_Forests/01_Concept_Ensemble_Theory|[Concept] 배깅, 페이스팅, 부스팅(AdaBoost, Gradient Boosting)]]
+  * [[Chapter_07_Ensemble_Learning_and_Random_Forests/02_Code_Ensemble_Implementation|[Code] Voting, Bagging, Random Forest 구현 예시]]
+  * [[Chapter_07_Ensemble_Learning_and_Random_Forests/03_Experiment_Ensemble_Analysis|[Experiment] 모델 규모에 따른 자원 사용량 분석 및 벤치마킹 초안]]
 
 * Chapter 08. Dimensionality Reduction (차원 축소)
   * [Code] PCA, t-SNE 알고리즘을 통한 고차원 데이터의 저차원 투영 및 시각화
